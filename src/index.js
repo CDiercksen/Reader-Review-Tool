@@ -16,7 +16,7 @@ console.log("hello world")
     }
     
     //add event listener for click event
-    fictionButton.addEventListener('click', fetchFiction())
+    fictionButton.addEventListener('click', () => fetchFiction())
 // Display list of books on current Best Seller list for selected category
 
 // EventListener 2 - user can click a title and the review will be displayed
