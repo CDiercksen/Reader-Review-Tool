@@ -7,8 +7,7 @@ console.log("hello world")
     const apiKey = "?api-key=UF8xmakry6jkkIvUvg7AqjHObjVGD9y2"
     //make function to make GET requests from API
     function fetchFiction() {
-       fetch("https://api.nytimes.com/svc/books/v3/lists/hardcover-fiction.json?api-key=UF8xmakry6jkkIvUvg7AqjHObjVGD9y2")
-        // fetch(apiFiction, apiKey)
+        fetch(apiFiction+apiKey)
         .then(res => res.json())
         .then(data => {
             console.log(data)
