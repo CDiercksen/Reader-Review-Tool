@@ -3,8 +3,18 @@ console.log("hello world")
     //grab buttons from html and assign to variables
     const fictionButton = document.querySelector("#get-fiction")
     //add event listener for click event
+    fictionButton.addEventListener('click', fetchFiction())
     //save API address as variable
+    const apiFiction = "https://api.nytimes.com/svc/books/v3/lists.json"
+    const apiKey = "?api-key=UF8xmakry6jkkIvUvg7AqjHObjVGD9y2"
     //make function to make GET requests from API
+    const fetchFiction = () => {
+        fetch(apiFiction, apiKey)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+    }
     
 // Display list of books on current Best Seller list for selected category
 
