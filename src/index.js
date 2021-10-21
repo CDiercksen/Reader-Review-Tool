@@ -32,4 +32,7 @@ console.log("hello world")
 
 // EventListener 3 - user can click a heart icon and favorite the book
 
+//get bootstrap for css
+//learn how to use bootstrap grid for layouts
+
 //stretch goals: use the Best Sellers List Names API to generate clickable buttons for every current list
