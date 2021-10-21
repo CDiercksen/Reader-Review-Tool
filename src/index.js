@@ -13,6 +13,11 @@ console.log("hello world")
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            //create ordered list from data.results.books 
+            // display :title, :author
+            // make eventListener "click" to expand object and display :description, book_review_link(or "waiting to be reviewed")
+            // make button to send to saved list
+            //make eventListener on button "click" to push object into savedReviewContainer
             debugger
         })
     }
