@@ -13,6 +13,7 @@ console.log("hello world")
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            debugger
         })
     }
     function fetchNonFiction() {
@@ -27,6 +28,9 @@ console.log("hello world")
     fictionButton.addEventListener('click', () => fetchFiction())
     nonFictionButton.addEventListener('click', () => fetchNonFiction())
 // Display list of books on current Best Seller list for selected category
+funtion displayList = 
+const fictionList = []
+const bookListing = {rank, title, author, description, book_review_link, book_uri}
 
 // EventListener 2 - user can click a title and the review will be displayed
 
