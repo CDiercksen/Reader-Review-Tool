@@ -15,16 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(apiFiction+apiKey)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             displayList(data.results.books)
-            // debugger
         })
     }
     function fetchNonFiction() {
         fetch(apiNonFiction+apiKey)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             displayList(data.results.books)
         })
     }
@@ -35,14 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Display list of books on current Best Seller list for selected category
     function displayList(books) {
         const main = document.querySelector("#review-list")
-        //if #review-list has > 0 li, remove them from the DOM
         books.forEach(bookObject => {
             const li = document.createElement('li');
             li.id = "item" + bookObject.rank
-            // li.innerHTML = `<a href=${bookObject.amazon_product_url}>${bookObject.title + ", by " + bookObject.author}</a>`;
-            // debugger
             li.innerText = bookObject.title + ", by " + bookObject.author
-            // add heart icon
             main.appendChild(li);
         })
     }
@@ -58,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //learn how to use bootstrap grid for layouts
     
     //stretch goals: 
+    
     // EventListener 4 - user can click a heart icon and favorite the book
     // EventListener 5 - user can click a title and the description will be displayed
     //use the Best Sellers List Names API to generate clickable buttons for every current list
