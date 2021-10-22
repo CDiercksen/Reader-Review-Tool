@@ -13,6 +13,8 @@ console.log("hello world")
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            displayList(data.results.books)
+            // debugger
         })
     }
     function fetchNonFiction() {
@@ -27,7 +29,15 @@ console.log("hello world")
     fictionButton.addEventListener('click', () => fetchFiction())
     nonFictionButton.addEventListener('click', () => fetchNonFiction())
 // Display list of books on current Best Seller list for selected category
-
+function displayList(books) {
+    const main = document.querySelector("#review-list")
+    books.forEach(bookObject => {
+        const li = document.createElement('li');
+        li.innerText= bookObject.title;
+        debugger
+    main.appendChild(li);
+    })
+}
 // EventListener 2 - user can click a title and the review will be displayed
 
 // EventListener 3 - user can click a heart icon and favorite the book
