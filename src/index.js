@@ -13,12 +13,6 @@ console.log("hello world")
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            //create ordered list from data.results.books 
-            // display :title, :author
-            // make eventListener "click" to expand object and display :description, book_review_link(or "waiting to be reviewed")
-            // make button to send to saved list
-            //make eventListener on button "click" to push object into savedReviewContainer
-            debugger
         })
     }
     function fetchNonFiction() {
@@ -33,9 +27,6 @@ console.log("hello world")
     fictionButton.addEventListener('click', () => fetchFiction())
     nonFictionButton.addEventListener('click', () => fetchNonFiction())
 // Display list of books on current Best Seller list for selected category
-funtion displayList = 
-const fictionList = []
-const bookListing = {rank, title, author, description, book_review_link, book_uri}
 
 // EventListener 2 - user can click a title and the review will be displayed
 
