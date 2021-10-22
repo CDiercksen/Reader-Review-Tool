@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const li = document.createElement('li');
             // debugger
             li.id = "item" + bookObject.rank
-            li.innerHTML = `<a href ${bookObject.sunday_review_link}>${bookObject.title + ", by " + bookObject.author}</a>`;
+            li.innerHTML = `<a href=${bookObject.amazon_product_url}>${bookObject.title + ", by " + bookObject.author}</a>`;
             //make inner text a link to bookObject.sunday_review_link
             // add heart icon
             main.appendChild(li);
