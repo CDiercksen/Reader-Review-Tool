@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            displayList(data.results.books)
         })
     }
     
