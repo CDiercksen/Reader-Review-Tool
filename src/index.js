@@ -33,7 +33,7 @@ function displayList(books) {
     const main = document.querySelector("#review-list")
     books.forEach(bookObject => {
         const li = document.createElement('li');
-        li.innerText= bookObject.title;
+        li.innerText= bookObject.title + ", by " + bookObject.author;
         debugger
     main.appendChild(li);
     })
