@@ -1,9 +1,9 @@
+//EventListener 1 - DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
     console.log("hello DOM")
     
 })
-    // EventListener 1 - User clicks a Best Seller List Category button and it fetches from New York Times Books API
-    //grab buttons from html and assign to variables
+    // EventListener 2 and 3 - User clicks a Best Seller List Category button and it fetches from New York Times Books API
     const fictionButton = document.querySelector("#get-fiction")
     const nonFictionButton = document.querySelector("#get-non-fiction")
     //save API address as variable
@@ -38,21 +38,26 @@ document.addEventListener('DOMContentLoaded', () => {
         //if #review-list has > 0 li, remove them from the DOM
         books.forEach(bookObject => {
             const li = document.createElement('li');
-            // debugger
             li.id = "item" + bookObject.rank
             // li.innerHTML = `<a href=${bookObject.amazon_product_url}>${bookObject.title + ", by " + bookObject.author}</a>`;
+            // debugger
             li.innerText = bookObject.title + ", by " + bookObject.author
             // add heart icon
             main.appendChild(li);
         })
     }
-    // EventListener 2 - user can click a title and the description will be displayed
-    
-    // EventListener 3 - user can click a heart icon and favorite the book
+    // const saveButton = document.createElement('button');
+    // saveButton.setAttribute("class", "btn btn-default",
+    // "aria-label", "Star",
+    //  "html", "<span class="glyphicon glyphicon-star" aria-hidden="true"></span>")
+    // )
     // write a function that listens for a click on the heart icon, and copies the li into #saved-review-container
     
-
-//get bootstrap for css
-//learn how to use bootstrap grid for layouts
-
-//stretch goals: use the Best Sellers List Names API to generate clickable buttons for every current list
+    
+    //get bootstrap for css
+    //learn how to use bootstrap grid for layouts
+    
+    //stretch goals: 
+    // EventListener 4 - user can click a heart icon and favorite the book
+    // EventListener 5 - user can click a title and the description will be displayed
+    //use the Best Sellers List Names API to generate clickable buttons for every current list
