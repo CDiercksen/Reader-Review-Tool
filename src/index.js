@@ -30,20 +30,35 @@ document.addEventListener('DOMContentLoaded', () => {
     fictionButton.addEventListener('click', () => fetchFiction())
     nonFictionButton.addEventListener('click', () => fetchNonFiction())
     // Display list of books on current Best Seller list for selected category
+    
     function displayList(books) {
         const main = document.querySelector("#review-list")
+        // "aria-label", "Star",
+        //  "html", "<span class="glyphicon glyphicon-star" aria-hidden=", true"></span>")
+        
         books.forEach(bookObject => {
             const li = document.createElement('li');
+            const saveButton = document.createElement('button');
+            saveButton.setAttribute("class", "btn btn-default", "id", "save_button")
+            saveButton.addEventListener('click', () => saveBook())
+            
             li.id = "item" + bookObject.rank
             li.innerText = bookObject.title + ", by " + bookObject.author
             main.appendChild(li);
+            li.appendChild(saveButton)
+            const item1 = document.querySelector("#item1")
         })
     }
-    // const saveButton = document.createElement('button');
-    // saveButton.setAttribute("class", "btn btn-default",
-    // "aria-label", "Star",
-    //  "html", "<span class="glyphicon glyphicon-star" aria-hidden="true"></span>")
-    // )
+function saveBook() {
+    const favoriteList = document.querySelector("#saved-review-list")
+    const favoriteBook = document.getElementById( 
+    const savedLi = document.createElement('li');
+    // savedLi.id = "item" + bookObject.rank
+    // savedLi.innerText = bookObject.title + ", by " + bookObject.author;
+    favoriteList.appendChild(favoritebook)
+    //grab book by li.id
+    //append to id="saved-review-list"
+}
     // write a function that listens for a click on the heart icon, and copies the li into #saved-review-container
     
     
