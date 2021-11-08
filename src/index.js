@@ -1,6 +1,6 @@
 //EventListener 1 - DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("hello DOM")
+    console.log("hello Brittany")
     
 })
     // EventListener 2 and 3 - User clicks a Best Seller List Category button and it fetches from New York Times Books API
@@ -33,31 +33,36 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function displayList(books) {
         const main = document.querySelector("#review-list")
-        // "aria-label", "Star",
-        //  "html", "<span class="glyphicon glyphicon-star" aria-hidden=", true"></span>")
         
         books.forEach(bookObject => {
-            const li = document.createElement('li');
-            const saveButton = document.createElement('button');
-            saveButton.setAttribute("class", "btn btn-default", "id", "save_button")
-            saveButton.addEventListener('click', () => saveBook())
             
+            const li = document.createElement('li');
+            
+            // li.append(renderBook(bookObject)) if renderBook returns a node(element)
+            //li.append(renderButton(bookObject)) if renderbutton returns a button node
+            //main.append(li)
             li.id = "item" + bookObject.rank
             li.innerText = bookObject.title + ", by " + bookObject.author
             main.appendChild(li);
+            
+            const saveButton = document.createElement('button');
+            saveButton.setAttribute("class", "btn btn-default", "id", "save_button")
+            saveButton.addEventListener('click', () => saveBook(bookObject))
             li.appendChild(saveButton)
             const item1 = document.querySelector("#item1")
         })
     }
-function saveBook() {
+    // function renderBook(li, bookObject)
+
+function saveBook(bookObject) {
     const favoriteList = document.querySelector("#saved-review-list")
-    const favoriteBook = document.getElementById( 
+    const favoriteBook = bookObject
     const savedLi = document.createElement('li');
     // savedLi.id = "item" + bookObject.rank
     // savedLi.innerText = bookObject.title + ", by " + bookObject.author;
     favoriteList.appendChild(favoritebook)
-    //grab book by li.id
-    //append to id="saved-review-list"
+    // grab book by li.id
+    // append to id="saved-review-list"
 }
     // write a function that listens for a click on the heart icon, and copies the li into #saved-review-container
     
